@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		63CD87B82D71E09100245F8C /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F303A62D71CB0C002820AE /* XcodeKit.framework */; };
+		63CD87B92D71E09100245F8C /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63F303A62D71CB0C002820AE /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63CD87BB2D71E09300245F8C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F303A42D71CB0C002820AE /* Cocoa.framework */; };
+		63F303B12D71CB0C002820AE /* Xcode Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 63F303A22D71CB0C002820AE /* Xcode Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		63F303822D71C57C002820AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +28,58 @@
 			remoteGlobalIDString = 63F3036F2D71C579002820AE;
 			remoteInfo = "Kew Developer";
 		};
+		63F303AF2D71CB0C002820AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63F303682D71C579002820AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63F303A12D71CB0C002820AE;
+			remoteInfo = "Xcode Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63CD87BA2D71E09100245F8C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				63CD87B92D71E09100245F8C /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63F303B62D71CB0C002820AE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				63F303B12D71CB0C002820AE /* Xcode Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		63F303702D71C579002820AE /* Kew Developer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kew Developer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F303812D71C57C002820AE /* Kew DeveloperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kew DeveloperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F3038B2D71C57C002820AE /* Kew DeveloperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kew DeveloperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F303A22D71CB0C002820AE /* Xcode Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Xcode Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F303A42D71CB0C002820AE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		63F303A62D71CB0C002820AE /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		63F303B22D71CB0C002820AE /* Exceptions for "Xcode Extension" folder in "Xcode Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 63F303A12D71CB0C002820AE /* Xcode Extension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		63F303722D71C579002820AE /* Kew Developer */ = {
@@ -43,6 +95,14 @@
 		63F3038E2D71C57C002820AE /* Kew DeveloperUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Kew DeveloperUITests";
+			sourceTree = "<group>";
+		};
+		63F303A82D71CB0C002820AE /* Xcode Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				63F303B22D71CB0C002820AE /* Exceptions for "Xcode Extension" folder in "Xcode Extension" target */,
+			);
+			path = "Xcode Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +129,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63F3039F2D71CB0C002820AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63CD87BB2D71E09300245F8C /* Cocoa.framework in Frameworks */,
+				63CD87B82D71E09100245F8C /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +147,8 @@
 				63F303722D71C579002820AE /* Kew Developer */,
 				63F303842D71C57C002820AE /* Kew DeveloperTests */,
 				63F3038E2D71C57C002820AE /* Kew DeveloperUITests */,
+				63F303A82D71CB0C002820AE /* Xcode Extension */,
+				63F303A32D71CB0C002820AE /* Frameworks */,
 				63F303712D71C579002820AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +159,18 @@
 				63F303702D71C579002820AE /* Kew Developer.app */,
 				63F303812D71C57C002820AE /* Kew DeveloperTests.xctest */,
 				63F3038B2D71C57C002820AE /* Kew DeveloperUITests.xctest */,
+				63F303A22D71CB0C002820AE /* Xcode Extension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		63F303A32D71CB0C002820AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63F303A42D71CB0C002820AE /* Cocoa.framework */,
+				63F303A62D71CB0C002820AE /* XcodeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +183,12 @@
 				63F3036C2D71C579002820AE /* Sources */,
 				63F3036D2D71C579002820AE /* Frameworks */,
 				63F3036E2D71C579002820AE /* Resources */,
+				63F303B62D71CB0C002820AE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				63F303B02D71CB0C002820AE /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				63F303722D71C579002820AE /* Kew Developer */,
@@ -163,6 +246,29 @@
 			productReference = 63F3038B2D71C57C002820AE /* Kew DeveloperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		63F303A12D71CB0C002820AE /* Xcode Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63F303B32D71CB0C002820AE /* Build configuration list for PBXNativeTarget "Xcode Extension" */;
+			buildPhases = (
+				63F3039E2D71CB0C002820AE /* Sources */,
+				63F3039F2D71CB0C002820AE /* Frameworks */,
+				63F303A02D71CB0C002820AE /* Resources */,
+				63CD87BA2D71E09100245F8C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				63F303A82D71CB0C002820AE /* Xcode Extension */,
+			);
+			name = "Xcode Extension";
+			packageProductDependencies = (
+			);
+			productName = "Xcode Extension";
+			productReference = 63F303A22D71CB0C002820AE /* Xcode Extension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +290,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 63F3036F2D71C579002820AE;
 					};
+					63F303A12D71CB0C002820AE = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 63F3036B2D71C579002820AE /* Build configuration list for PBXProject "Kew Developer" */;
@@ -200,6 +309,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				63F303A12D71CB0C002820AE /* Xcode Extension */,
 				63F3036F2D71C579002820AE /* Kew Developer */,
 				63F303802D71C57C002820AE /* Kew DeveloperTests */,
 				63F3038A2D71C57C002820AE /* Kew DeveloperUITests */,
@@ -223,6 +333,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		63F303892D71C57C002820AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63F303A02D71CB0C002820AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +370,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63F3039E2D71CB0C002820AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +389,11 @@
 			isa = PBXTargetDependency;
 			target = 63F3036F2D71C579002820AE /* Kew Developer */;
 			targetProxy = 63F3038C2D71C57C002820AE /* PBXContainerItemProxy */;
+		};
+		63F303B02D71CB0C002820AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63F303A12D71CB0C002820AE /* Xcode Extension */;
+			targetProxy = 63F303AF2D71CB0C002820AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -509,6 +638,66 @@
 			};
 			name = Release;
 		};
+		63F303B42D71CB0C002820AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 63F303A82D71CB0C002820AE /* Xcode Extension */;
+			baseConfigurationReferenceRelativePath = Configurations/debug.xcconfig;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Xcode Extension/Xcode_Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4AM5US9G8B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Xcode Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Xcode Extension";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hellanillas.Kew-Developer.Xcode-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		63F303B52D71CB0C002820AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Xcode Extension/Xcode_Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4AM5US9G8B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Xcode Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Xcode Extension";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hellanillas.Kew-Developer.Xcode-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,6 +733,15 @@
 			buildConfigurations = (
 				63F3039C2D71C57C002820AE /* Debug */,
 				63F3039D2D71C57C002820AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63F303B32D71CB0C002820AE /* Build configuration list for PBXNativeTarget "Xcode Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F303B42D71CB0C002820AE /* Debug */,
+				63F303B52D71CB0C002820AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

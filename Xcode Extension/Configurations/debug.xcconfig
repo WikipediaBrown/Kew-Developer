@@ -1,0 +1,39 @@
+//
+//  debug.xcconfig
+//  Kew Developer
+//
+//  Created by nonplus on 2/28/25.
+//
+
+// Documentation for Xcode configuration files can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project/
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Extra info on updating Xcode configuration files can be found at:
+// https://nshipster.com/xcconfig/
+
+// **Set Display Name of App**
+// Generate entries into plist file as documented at:
+// https://developer.apple.com/documentation/xcode/build-settings-reference#Bundle-Display-Name
+APP_DISPLAY_NAME = $(PRODUCT_NAME) Debug
+GENERATE_INFOPLIST_FILE = YES
+INFOPLIST_KEY_CFBundleDisplayName = $(APP_DISPLAY_NAME)
+BUNDLE_DISPLAY_NAME = $(APP_DISPLAY_NAME)
+//MESSAGES_EXTENSION_DISPLAY_NAME = $(APP_DISPLAY_NAME)
+
+// **Set Bundle Identifier for specific build configuration**
+// This method is referenced at:
+// https://stackoverflow.com/a/40111556/5863650
+PRODUCT_BUNDLE_IDENTIFIER = com.hellanillas.Kew-Developer.debug
+
+// **Set Local API Host & Path**
+API_HOST = localhost
+API_PATH = /
+MAX_RETRIES = 0
+PORT = 11434
+
+// **Disable User Script Sandboxing**
+// https://developer.apple.com/documentation/xcode/build-settings-reference#User-Script-Sandboxing
+ENABLE_USER_SCRIPT_SANDBOXING = NO
